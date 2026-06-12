@@ -2,7 +2,10 @@
 const counter = document.getElementById("counter");
 const incrementBtn = document.getElementById("incrementBtn");
 
-incrementBtn.onclick = function () {
-    alert(counter.innerText);
-    counter.innerText = Number(counter.innerText) + 1;
-};
+incrementBtn.addEventListener("click", () => {
+    let currentValue = Number(counter.innerText);
+
+    alert(currentValue); 
+
+    counter.innerText = currentValue + 1;
+});
